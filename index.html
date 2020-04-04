@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Alan</title>
-  </head>
-  <body>
-    <h1>覺得厲害</h1>
-  </body>
+<head>
+   <meta charset="utf-8">
+   <title>AlanWeb</title>
+</head>
+<body>
+   <p>留言區域：</p><textarea id='content' type='text'></textarea><br/>
+   <p>顯示留言區域：</p><div id='display_area'></div>
+   <input value="提交" type='button' id='btn'/>
+
+   <script>
+      window.onload = function(){
+         var display_area = document.getElementById('display_area');
+         var btn = document.getElementById('btn');
+         btn.onclick = function(){
+            var content_val = document.getElementById('content').value;
+            display_area.append(content_val);
+         };
+      }
+   </script>
+</body>
+
 </html>
