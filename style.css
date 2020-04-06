@@ -71,3 +71,9 @@ li{
    position: relative;
    background-color: rgba(0,0,0,0.3);
 }
+.slide-show{
+   overflow: hidden;
+}
+.album-box{
+   overflow: hidden;
+}
