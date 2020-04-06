@@ -62,14 +62,12 @@ li{
 .banner .slider-box{
    float: left;
    width: 61%;
-   height: 500px;
    position: relative;
    background-color: rgba(0,0,0,0.3);
 }
 .banner .album{
    float: right;
    width: 37%;
-   height: 500px;
    position: relative;
    background-color: rgba(0,0,0,0.3);
 }
