@@ -77,3 +77,6 @@ li{
 .album-box{
    overflow: hidden;
 }
+.slide-show img, .album-box img{
+   width: 100%;
+}
