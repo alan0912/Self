@@ -5,14 +5,15 @@
    <meta charset="utf-8">
    <title>AlanWeb</title>
    <link rel='stylesheet' href='style.css'>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
    <nav class='menu'>
       <div class='navbar'>
          <ul>
-            <li><a href=""><span>Home</span></a></li>
-            <li><a href="about.html"><span>About</span></a></li>
+            <li><a id="home-anchor"><span>Home</span></a></li>
+            <li><a id="about-anchor"><span>About</span></a></li>
             <li><a href="#"><span>Media</span></a></li>
             <li><a href="#"><span>Side-Project</span></a></li>
             <li><a href="#"><span>Contact</span></a></li>
@@ -20,7 +21,7 @@
       </div>
    </nav>
    <div class="banner">
-      <div class="slideshow-cotainer">
+      <div class="slideshow-container">
          <div class="slide-show fade">
             <img src="images/slide_01.jpg">
          </div>
@@ -30,14 +31,15 @@
          <div class="slide-show fade">
             <img src="images/slide_03.jpg">
          </div>
+         <h1>Alan Website</h1>
+         <a id='next' >&#10095;&#10095;</a>
       </div>
-      <a href="#pages-move" class="scroll">
-         <p>SCROLL</p>
-         <span></span>
-      </a>
    </div>
    <main>
-      <div id="pages-move" style="height:100vh;"></div>
+      <div style="height:100vh;"></div>
+      <div class="about-box" id="about">
+         
+      </div>
    </main>
 
 
@@ -56,6 +58,19 @@
          slides[slideIndex - 1].style.display = "block";
          setTimeout(showSlides, 4000);
       }
+
+      $(function(){
+         $('#home-anchor').click(function(){
+            $('html,body').animate({scrollTop:'0px'},800);
+         });
+         $('#next').click(function(){
+            $('html,body').animate({scrollTop:$('#about').offset().top},800);
+         });
+         $('#about-anchor').click(function(){
+            $('html,body').animate({scrollTop:$('#about').offset().top},800);
+         });
+         
+      })
    </script>
 </body>
 
