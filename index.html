@@ -12,8 +12,8 @@
    <nav class='menu'>
       <div class='navbar'>
          <ul>
-            <li><a id="home-anchor"><span>Home</span></a></li>
-            <li><a id="about-anchor"><span>About</span></a></li>
+            <li><a id="home"><span>Home</span></a></li>
+            <li><a id="about"><span>About</span></a></li>
             <li><a href="#"><span>Media</span></a></li>
             <li><a href="#"><span>Side-Project</span></a></li>
             <li><a href="#"><span>Contact</span></a></li>
@@ -37,7 +37,7 @@
    </div>
    <main>
       <div style="height:100vh;"></div>
-      <div class="about-box" id="about">
+      <div class="about-box" id="about-anchor">
          
       </div>
    </main>
@@ -60,14 +60,14 @@
       }
 
       $(function(){
-         $('#home-anchor').click(function(){
+         $('#home').click(function(){
             $('html,body').animate({scrollTop:'0px'},800);
          });
          $('#next').click(function(){
-            $('html,body').animate({scrollTop:$('#about').offset().top},800);
+            $('html,body').animate({scrollTop:$('#about-anchor').offset().top},800);
          });
-         $('#about-anchor').click(function(){
-            $('html,body').animate({scrollTop:$('#about').offset().top},800);
+         $('#about').click(function(){
+            $('html,body').animate({scrollTop:$('#about-achor').offset().top},800);
          });
          
       })
