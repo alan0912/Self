@@ -147,6 +147,7 @@ li{
 }
 .about-title-box{
    padding-top: 10px; 
+   padding-bottom: 30px;
 }
 .about-title-box span{
    display: inline-block;
@@ -166,14 +167,47 @@ li{
    font-size: 14px;
    letter-spacing: 2px;
    line-height: 3;
-   margin-bottom: 25px;
+   margin-bottom: 30px;
 }
 .about-more-box{
-   margin: 0 auto;
+   margin: 60px auto 50px auto;
+   max-width: 100%;
+   width: 160px;
 }
-.about-more-box a{
+.about-more{
    text-align: center;
    color: #a8ad6a;
    text-decoration: none;
+   width: 160px;
+   height: 40px;
+   position: relative;
+   display: block;
+   font-size: 14px;
 }
-
+.about-more p{
+   width: 100%;
+   height: 100%;
+   position: relative;
+   letter-spacing: 1px;
+   font-size: 14px;
+   line-height: 38px;
+   box-sizing: border-box;
+}
+.line-right{
+   width: 1px;
+   height: 10px;
+   bottom: 0;
+   right: 0;
+   background-color: #a8ad6a;
+   z-index: 3;
+   position: absolute;
+}
+.line-bottom{
+   width: 10px;
+   height: 1px;
+   bottom: 0;
+   right: 0;
+   background-color: #a8ad6a;
+   z-index: 3;
+   position: absolute;
+}
