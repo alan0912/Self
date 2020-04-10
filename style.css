@@ -114,7 +114,9 @@ li{
    transition: 0.6s ease;
    border-radius: 0 3px 3px 0;
    user-select: none;
+   animation: pulse 0.7s infinite alternate;  
 }
-.slideshow-container a:hover{
-   font-size: 45px;
+@keyframes pulse{
+   from{bottom:2%}
+   to{bottom:0%}
 }
