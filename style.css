@@ -93,7 +93,7 @@ li{
    transform: translate(-50%, -50%);
    top: 45%;
    left: 50%;
-   color:rgb(71, 250, 220);
+   color:#cccccc;
    user-select: none;
    font-size: 60px;
 }
