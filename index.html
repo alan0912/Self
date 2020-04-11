@@ -6,6 +6,7 @@
    <title>AlanWeb</title>
    <link rel='stylesheet' href='style.css'>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
 </head>
 
 <body>
@@ -37,7 +38,7 @@
    </div>
    <main>
       <div id="about-anchor" ></div>
-      <section class="about-block">
+      <section class="about-block clear">
          <div class="about-box">
             <div class="about-info-box">
                <div class="about-title-box">
@@ -58,12 +59,13 @@
                   </a>
                </div>
             </div>
-            <div class="about-img" style="height:100vh;">
-               
+            <div class="about-img-box">
+               <span class="about-bg" style="background-image:url(images/about.jpg);"></span>
 
             </div>
          </div>
       </section>
+      <div style="height:100vh;"></div>
    </main>
 
 
@@ -93,8 +95,35 @@
          $('#about').click(function(){
             $('html,body').animate({scrollTop:$('#about-achor').offset().top},800);
          });
-         
       })
+
+      jQuery(function($){
+
+         $(window).scroll(function () {
+            var scrollVal = $(this).scrollTop();
+            if(scrollVal > 100){
+               
+               $(".about-img-box").addClass('test');
+               
+            }
+         });
+/*
+         var about_img = $('.about-img-box');
+         var waypoint = new Waypoint({
+            element: $('#toggle'),
+            handler: function() {
+               about_img.animate({
+               opacity:'0.475243'
+               },500)
+            }
+         });
+
+         $("button").click(function(){
+         	$(".popup").slideToggle();	
+            $(".popup").remove();
+         });*/
+      });
+      
    </script>
 </body>
 
