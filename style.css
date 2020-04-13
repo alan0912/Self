@@ -1,3 +1,22 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 /*navbar*/
 body{
    background-color: #1f1f1f;
@@ -34,7 +53,7 @@ nav{
    max-height: 65px;
    z-index: 3;
 }
-ul{
+.navbar ul{
    padding: 0;
    margin: 0;
    width: auto;
@@ -42,7 +61,7 @@ ul{
    justify-content: space-between; 
    height: 65px;
 }
-li{
+.navbar ul li{
    display: flex;
    margin: 0;
    padding: 0;
@@ -273,6 +292,62 @@ li{
 /*media*/
 .media-block{
    margin-top: 50px;
-   height: calc(100vh - 65px);
+   height: 680px;
    width:100%;
+   position: relative;
+}
+.media-box{
+   position: relative;
+   max-width: 100%;
+   height: 100%;
+   margin: 0 auto;
+   background-color: #1f1f1f;
+}
+.media-list-box{
+   list-style: none;
+   top: 0;
+   width: 100%;
+   height: 100%;
+}
+.media-list-item{
+   float: left;
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+.media-list-item:nth-child(1){
+   width:50%;
+   top: 0
+}
+.media-list-item:nth-child(2){
+   width:25%;
+   height: 50%;
+}
+.media-list-item:nth-child(3){
+   width:25%;
+   height: 50%;
+}
+.media-list-item:nth-child(4){
+   width:25%;
+   height: 50%;
+}
+.media-list-item:nth-child(5){
+   width:25%;
+   height: 50%;
+}
+.media-list-item:nth-child(1) img{
+   max-width: 100%;
+   height: 680px;
+   display: inline-block;
+   vertical-align: middle;
+   line-height: 1;
+   background-size: contain;
+}
+.media-list-item img{
+   max-width: 100%;
+   height: 340px;
+   display: inline-block;
+   vertical-align: middle;
+   line-height: 1;
+   background-size: contain;
 }
