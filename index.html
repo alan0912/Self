@@ -6,7 +6,7 @@
    <title>AlanWeb</title>
    <link rel='stylesheet' href='style.css'>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
          <div class="slide-show fade">
             <img src="images/slide_03.jpg">
          </div>
-         <h1>Alan Website</h1>
+         <h1 id ='waypoint'>Alan Website</h1>
          <a id='next' >&#10095;&#10095;</a>
       </div>
    </div>
@@ -65,7 +65,10 @@
             </div>
          </div>
       </section>
-      <div style="height:100vh;"></div>
+      <section class="media-block">
+
+      </section>
+      <div></div>
    </main>
 
 
@@ -101,11 +104,26 @@
 
          $(window).scroll(function () {
             var scrollVal = $(this).scrollTop();
-            if(scrollVal > 100){
-               $(".about-img-box").addClass('test');
+            if(scrollVal > 300){
+               $(".about-img-box").removeClass('fade-out');
+               $(".about-img-box").addClass('fade-in');
+            }
+            if(scrollVal < 300){
+               $(".about-img-box").removeClass('fade-in');
+               $(".about-img-box").addClass('fade-out');
+
             }
          });
       });
+
+      var waypoint = new Waypoint({
+         element: document.getElementById('waypoint'),
+         handler: function(direction) {
+            if(direction == 'down')
+               $('.about-title-box').css('top','-50px')
+         },
+         offset: '0%'
+      })
       
    </script>
 </body>
