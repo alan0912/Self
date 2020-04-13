@@ -133,7 +133,6 @@ li{
 .about-block{
    width:100%;
    margin-top: 50px;
-
    background-color: #333333; 
 }
 .about-box{
@@ -253,14 +252,27 @@ li{
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
-   
    z-index: 1;
 }
-.test{
-   animation: test 4.5s 1 ; 
+.fade-in{
+   animation: fade-in 1s 1 linear; 
    animation-fill-mode : forwards;
 }
-@keyframes test{
-   from{top:0px; opacity: 0.1;}
+@keyframes fade-in{
+   from{top:15px; opacity: 0.1;}
    to{top:-35px; opacity: 1;}
+}
+.fade-out{
+   animation: fade-out 1s 1 linear; 
+   animation-fill-mode : forwards;
+}
+@keyframes fade-out{
+   from{top:-35px; opacity: 0.1;}
+   to{top:0px; opacity: 1;}
+}
+/*media*/
+.media-block{
+   margin-top: 50px;
+   height: calc(100vh - 65px);
+   width:100%;
 }
