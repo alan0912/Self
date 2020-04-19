@@ -32,12 +32,12 @@
          <div class="slide-show fade">
             <img src="images/slide_03.webp">
          </div>
-         <h1 id ='waypoint'>Alan Website</h1>
-         <a id='next' >&#10095;&#10095;</a>
+         <h1 id='waypoint'>Alan Website</h1>
+         <a id='next'>&#10095;&#10095;</a>
       </div>
    </div>
    <main>
-      <div id="about-anchor" ></div>
+      <div id="about-anchor"></div>
       <section class="about-block clear">
          <div class="about-box">
             <div class="about-info-box">
@@ -71,7 +71,7 @@
                <li class="media-list-item">
                   <a href="">
                      <figure>
-                        <img src="images/media_01.webp" alt="">
+                        <img src="images/media_01.webp" alt="物聯網">
                      </figure>
                      <span class="line-right-top line-h"></span>
                      <span class="line-top-right line-w"></span>
@@ -81,15 +81,15 @@
                      <span class="line-top-left line-w"></span>
                      <span class="line-left-bottom line-h"></span>
                      <span class="line-bottom-left line-w"></span>
+                     <div class='media-item-inner'>
+                        <div class="media-inner-title">物聯網</div>
+                     </div>
                   </a>
-                  <div class='media-item-inner'>
-                     <div class="media-inner-title">物聯網</div>
-                  </div>
                </li>
                <li class="media-list-item">
                   <a href="">
                      <figure>
-                        <img src="images/media_02.webp" alt="">
+                        <img src="images/media_02.webp" alt="生物辨識">
                      </figure>
                      <span class="line-right-top line-h"></span>
                      <span class="line-top-right line-w"></span>
@@ -99,15 +99,15 @@
                      <span class="line-top-left line-w"></span>
                      <span class="line-left-bottom line-h"></span>
                      <span class="line-bottom-left line-w"></span>
-                  </a>
-                  <div class='media-item-inner'>
+                     <div class='media-item-inner'>
                         <div class="media-inner-title">生物辨識</div>
                      </div>
+                  </a>
                </li>
                <li class="media-list-item">
                   <a href="">
                      <figure>
-                        <img src="images/media_03.webp" alt="">
+                        <img src="images/media_03.webp" alt="醫學科技">
                      </figure>
                      <span class="line-right-top line-h"></span>
                      <span class="line-top-right line-w"></span>
@@ -117,15 +117,15 @@
                      <span class="line-top-left line-w"></span>
                      <span class="line-left-bottom line-h"></span>
                      <span class="line-bottom-left line-w"></span>
-                  </a>
-                  <div class='media-item-inner'>
+                     <div class='media-item-inner'>
                         <div class="media-inner-title">醫學科技</div>
                      </div>
+                  </a>
                </li>
                <li class="media-list-item">
                   <a href="">
                      <figure>
-                        <img src="images/media_04.webp" alt="">
+                        <img src="images/media_04.webp" alt="區塊鏈">
                      </figure>
                      <span class="line-right-top line-h"></span>
                      <span class="line-top-right line-w"></span>
@@ -135,15 +135,15 @@
                      <span class="line-top-left line-w"></span>
                      <span class="line-left-bottom line-h"></span>
                      <span class="line-bottom-left line-w"></span>
-                  </a>
-                  <div class='media-item-inner'>
+                     <div class='media-item-inner'>
                         <div class="media-inner-title">區塊鏈</div>
                      </div>
+                  </a>
                </li>
                <li class="media-list-item">
                   <a href="">
                      <figure>
-                        <img src="images/media_05.webp" alt="">
+                        <img src="images/media_05.webp" alt="5G網路">
                      </figure>
                      <span class="line-right-top line-h"></span>
                      <span class="line-top-right line-w"></span>
@@ -153,10 +153,10 @@
                      <span class="line-top-left line-w"></span>
                      <span class="line-left-bottom line-h"></span>
                      <span class="line-bottom-left line-w"></span>
-                  </a>
-                  <div class='media-item-inner'>
+                     <div class='media-item-inner'>
                         <div class="media-inner-title">5G網路</div>
                      </div>
+                  </a>
                </li>
             </ul>
          </div>
@@ -181,27 +181,27 @@
          setTimeout(showSlides, 4000);
       }
 
-      $(function(){
-         $('#home').click(function(){
-            $('html,body').animate({scrollTop:'0px'},800);
+      $(function () {
+         $('#home').click(function () {
+            $('html,body').animate({ scrollTop: '0px' }, 800);
          });
-         $('#next').click(function(){
-            $('html,body').animate({scrollTop:$('#about-anchor').offset().top},800);
+         $('#next').click(function () {
+            $('html,body').animate({ scrollTop: $('#about-anchor').offset().top }, 800);
          });
-         $('#about').click(function(){
-            $('html,body').animate({scrollTop:$('#about-achor').offset().top},800);
+         $('#about').click(function () {
+            $('html,body').animate({ scrollTop: $('#about-achor').offset().top }, 800);
          });
       })
 
-      jQuery(function($){
+      jQuery(function ($) {
 
          $(window).scroll(function () {
             var scrollVal = $(this).scrollTop();
-            if(scrollVal > 300){
+            if (scrollVal > 300) {
                $(".about-img-box").removeClass('fade-out');
                $(".about-img-box").addClass('fade-in');
             }
-            if(scrollVal < 300){
+            if (scrollVal < 300) {
                $(".about-img-box").removeClass('fade-in');
                $(".about-img-box").addClass('fade-out');
 
@@ -211,13 +211,13 @@
 
       var waypoint = new Waypoint({
          element: document.getElementById('waypoint'),
-         handler: function(direction) {
-            if(direction == 'down')
-               $('.about-title-box').css('top','-50px')
+         handler: function (direction) {
+            if (direction == 'down')
+               $('.about-title-box').css('top', '-50px')
          },
          offset: '0%'
       })
-      
+
    </script>
 </body>
 
