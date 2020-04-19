@@ -26,6 +26,10 @@ body{
    font-family: 微軟正黑體;
    color:#f1f1f1;
 } 
+.current{
+   color: #00BFFF;
+   font-weight: bold;
+}
 nav a{
    padding: 0 10px;
    color:#f5f5f7;
@@ -37,9 +41,7 @@ nav a{
    user-select: none;
 }
 nav a :hover{
-   color: #ffffff;
-   font-size: 17px;
-   font-weight:bold;
+   color: #00BFFF;
    cursor: pointer;
 }
 nav{
